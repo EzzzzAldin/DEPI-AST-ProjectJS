@@ -1,0 +1,106 @@
+:root {
+  --ink: #1c1b1f;
+  --muted: #6b6874;
+  --bg: #f3f1ee;
+  --surface: #ffffff;
+  --accent: #395c8f;
+  --accent-soft: #e7edf7;
+  --danger: #b4453a;
+  --success: #2f7a4f;
+  --border: #e5e1db;
+  --radius: 10px;
+  font-family: "Segoe UI", "Cairo", Tahoma, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--ink);
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 460px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.card__header h1 { margin: 0 0 4px; font-size: 22px; }
+.card__subtitle { margin: 0 0 20px; color: var(--muted); font-size: 14px; }
+
+.search-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 16px;
+}
+
+.search-input:focus { border-color: var(--accent); }
+
+.result-box {
+  min-height: 96px;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.result-box__hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--accent-soft);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.result-box__loading { color: var(--muted); font-size: 14px; margin: 0; }
+
+.result-box__user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.user-name { margin: 0; font-weight: 600; font-size: 15px; }
+.user-meta { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+
+.result-box__error { color: var(--danger); font-size: 14px; margin: 0; }

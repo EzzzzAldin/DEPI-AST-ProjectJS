@@ -1,0 +1,132 @@
+:root {
+  --ink: #1c1b1f;
+  --muted: #6b6874;
+  --bg: #f6f4f1;
+  --surface: #ffffff;
+  --accent: #3f6b5e;
+  --accent-soft: #e4ede9;
+  --danger: #b4453a;
+  --border: #e5e1db;
+  --radius: 10px;
+  font-family: "Segoe UI", "Cairo", Tahoma, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--ink);
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 460px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.card__header h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.card__subtitle {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.add-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.add-form__input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.add-form__input:focus {
+  border-color: var(--accent);
+}
+
+.add-form__btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-form__btn:hover { opacity: 0.9; }
+
+.empty-state {
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 6px 8px 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.tag__remove {
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag__remove:hover {
+  background: rgba(0,0,0,0.08);
+  color: var(--danger);
+}
+
+.card__footer {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+}

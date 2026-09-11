@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search for a Product</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <header class="card__header">
+        <h1>Search for a Product</h1>
+        <p class="card__subtitle">
+          Search by name or category (e.g. "laptop" or "electronics")
+        </p>
+      </header>
+
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Type here..."
+        autocomplete="off"
+      />
+
+      <p class="results-count" id="resultsCount"></p>
+
+      <ul class="results" id="resultsList"></ul>
+
+      <p class="no-results" id="noResults">No matching results</p>
+    </main>
+  </body>
+</html>
