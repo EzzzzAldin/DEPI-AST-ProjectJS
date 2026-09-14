@@ -23,9 +23,42 @@
         autocomplete="off"
       />
 
-      <div class="result-box" id="resultBox">
-        <p class="result-box__hint">Search will start when you type</p>
+      <div
+        class="result-box"
+        id="resultBox"
+        style="display: flex; flex-direction: column; gap: 16px"
+      >
+        <!-- State 1 -->
+        <p class="result-box__hint" id="hintState" style="width: 100%">
+          Search will start when you type
+        </p>
+
+        <!-- State 2 -->
+        <div
+          class="result-box__loading-wrapper"
+          id="loadingState"
+          style="width: 100%"
+        >
+          <div class="spinner"></div>
+          <p class="result-box__loading">Searching for the user...</p>
+        </div>
+
+        <!-- State 3 -->
+        <p class="result-box__error" id="errorState" style="width: 100%">
+          No user found with this username
+        </p>
+
+        <!-- State 4 -->
+        <div class="result-box__user" id="userState" style="width: 100%">
+          <div class="avatar" id="userAvatar">E</div>
+
+          <div>
+            <p class="user-name" id="userName">Ezz El-Din</p>
+            <p class="user-meta" id="userRole">Full Stack Developer</p>
+          </div>
+        </div>
       </div>
     </main>
+
   </body>
 </html>
